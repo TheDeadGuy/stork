@@ -1,3 +1,7 @@
+# Why is this forked?
+I've forked it to make this work on ARM64 systems like the raspberry pi4.
+Things i've tested. rake build
+
 # Stork
 
 <img align="right" src="/doc/static/stork-square-200px.png">
