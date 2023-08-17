@@ -1,12 +1,20 @@
 # Why is this forked?
+
 I've forked it to make this work on ARM64 systems like the raspberry pi4.
-Things i've tested. rake build
+Things i've tested:
+- [x] rake build
+- [ ] rake install:agent
+- [ ] rake install:server
+- [ ] Agent communication
+- [ ] server operation
+ 
 
 # Pre-Req/Dependencies:
-Rake
-Git
-Python3-venv
-java/jdk (default-jdk)
+
+* Rake
+* Git
+* Python3-venv
+* java/jdk (default-jdk)
 
 # Stork
 
