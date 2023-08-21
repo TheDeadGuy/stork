@@ -8,8 +8,8 @@ Things i've tested:
 - [x] Agent communication
 - [ ] server operation
  
-There seems to be an issue where "stork-agent" isn't craeted. so this may need to be created manually with "useradd --system --home-dir "/var/lib/stork-agent" stork-agent" 
-The home directory needs to have it's ownership changed aswell. so run: "chown -R stork-agent /var/lib/stork-agent"
+There seems to be an issue where `stork-agent` isn't created. so this may need to be created manually with `useradd --system --home-dir "/var/lib/stork-agent" stork-agent` 
+The home directory needs to have it's ownership changed aswell. so run: `chown -R stork-agent /var/lib/stork-agent`
 
 Server requirements/tests not done. I don't require a server to be ran on Pi. If someone wants to run stork server on a raspberry pi. I could look into it.
 
