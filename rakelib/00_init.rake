@@ -411,6 +411,10 @@ case uname.rstrip
         fail
 end
 
+### Recognize the architecture
+arc=`uname -m`
+
+
 ### Tasks support conditions
 # Some prerequisites are related to the libc library but
 # without official libc-musl variants. They cannot be installed using this Rake
@@ -469,6 +473,18 @@ else
   puts "ERROR: Unknown/unsupported OS: %s" % UNAME
   fail
 end
+
+case arc.rstrip
+when "aarch64"
+  go_suffix="linux-arm64"
+  protoc_suffix="linux-aarch_64"
+  node_suffix="linux-arm64"
+  golangcilint_suffix="linux-arm64"
+  chrome_drv_suffix="linux64"
+  shellcheck_suffix="linux.aarch64"
+  goswaggerarm="linux_arm64"
+end
+
 
 ### Define dependencies
 
@@ -856,6 +872,9 @@ GOSWAGGER = File.join(go_tools_dir, "goswagger")
 file GOSWAGGER => [WGET, GO, TAR, go_tools_dir] do
     if OS != 'FreeBSD' && OS != "OpenBSD"
         goswagger_suffix = "linux_amd64"
+        if goswaggerarm == "linux_arm64"
+            goswagger_suffix = "linux_arm64"
+        end
         if OS == 'macos'
             # GoSwagger fails to build on macOS due to https://gitlab.isc.org/isc-projects/stork/-/issues/848.
             goswagger_suffix="darwin_amd64"

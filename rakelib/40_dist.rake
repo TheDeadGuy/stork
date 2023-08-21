@@ -358,7 +358,8 @@ namespace :install do
             ENV["DEST"] = "/"
         end
         sh "mkdir", "-p", ENV["DEST"]
-        sh "cp", "-a", "-f", File.join(agent_dist_dir, "."), ENV["DEST"]
+#        sh "cp", "-a", "-f", "-r", File.join(agent_dist_dir, "."), ENV["DEST"]
+        sh "rsync", "-l", "-L", "--copy-unsafe-links", "--safe-links", "-k", "-K", "--ignore-existing", File.join(agent_dist_dir, "."), ENV["DEST"]
     end
 
     desc "Install server
