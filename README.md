@@ -9,6 +9,11 @@ Things i've tested:
 - [ ] server operation
  
 There seems to be an issue where "stork-agent" isn't craeted. so this may need to be created manually with "useradd --system --home-dir "/var/lib/stork-agent" stork-agent" 
+The home directory needs to have it's ownership changed aswell. so run: "chown -R stork-agent /var/lib/stork-agent"
+
+Server requirements/tests not done. I don't require a server to be ran on Pi. If someone wants to run stork server on a raspberry pi. I could look into it.
+
+This will only work on Arm64 systems. Arm7/6, etc, etc won't work. This should still work with the systems it originally made to work with.
 
 # Pre-Req/Dependencies:
 
