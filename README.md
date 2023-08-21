@@ -3,11 +3,12 @@
 I've forked it to make this work on ARM64 systems like the raspberry pi4.
 Things i've tested:
 - [x] rake build
-- [ ] rake install:agent
+- [x] rake install:agent
 - [ ] rake install:server
-- [ ] Agent communication
+- [x] Agent communication
 - [ ] server operation
  
+There seems to be an issue where "stork-agent" isn't craeted. so this may need to be created manually with "useradd --system --home-dir "/var/lib/stork-agent" stork-agent" 
 
 # Pre-Req/Dependencies:
 
