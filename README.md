@@ -15,6 +15,10 @@ Server requirements/tests not done. I don't require a server to be ran on Pi. If
 
 This will only work on Arm64 systems. Arm7/6, etc, etc won't work. This should still work with the systems it originally made to work with.
 
+This will also not work on a 1gb raspberry pi. i used a 4gb raspberry pi. also the SD Card speed will determine how long building will take. i found with a v30 sdcard it'll take 15-45 minutes. with a generic card. it'll take a few hours. 
+
+I will also create another repository with the ARM64 debian package attached. -> https://github.com/TheDeadGuy/Stork-DPKG-for-ARM64
+
 # Pre-Req/Dependencies:
 
 * Rake
