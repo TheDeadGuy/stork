@@ -8,16 +8,15 @@ Things i've tested:
 - [x] Agent communication
 - [X] server operation
  
-There seems to be an issue where `stork-agent` isn't created. so this may need to be created manually with `useradd --system --home-dir "/var/lib/stork-agent" stork-agent` 
+There seems to be an issue where `stork-agent` isn't created always created. If it is ignore this bit.
+To manually create the user, run `useradd --system --home-dir "/var/lib/stork-agent" stork-agent` 
 The home directory needs to have it's ownership changed aswell. so run: `chown -R stork-agent /var/lib/stork-agent`
-
-Server requirements/tests not done. I don't require a server to be ran on Pi. If someone wants to run stork server on a raspberry pi. I could look into it.
 
 This will only work on Arm64 systems. Arm7/6, etc, etc won't work. This should still work with the systems it originally made to work with.
 
 This will also not work on a 1gb raspberry pi. i used a 4gb raspberry pi. also the SD Card speed will determine how long building will take. i found with a v30 sdcard it'll take 15-45 minutes. with a generic card. it'll take a few hours. 
 
-I will also create another repository with the ARM64 debian package attached. -> https://github.com/TheDeadGuy/Stork-DPKG-for-ARM64
+Here is a repository with the agent and server dpkg files as they will be quicker and easier then building from source. -> https://github.com/TheDeadGuy/Stork-DPKG-for-ARM64
 
 # Pre-Req/Dependencies:
 
