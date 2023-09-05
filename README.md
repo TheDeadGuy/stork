@@ -4,9 +4,9 @@ I've forked it to make this work on ARM64 systems like the raspberry pi4.
 Things i've tested:
 - [x] rake build
 - [x] rake install:agent
-- [ ] rake install:server
+- [X] rake install:server
 - [x] Agent communication
-- [ ] server operation
+- [X] server operation
  
 There seems to be an issue where `stork-agent` isn't created. so this may need to be created manually with `useradd --system --home-dir "/var/lib/stork-agent" stork-agent` 
 The home directory needs to have it's ownership changed aswell. so run: `chown -R stork-agent /var/lib/stork-agent`
@@ -25,6 +25,10 @@ I will also create another repository with the ARM64 debian package attached. ->
 * Git
 * Python3-venv
 * java/jdk (default-jdk)
+
+  If you're installing server you'll need postgresql
+* postgresql
+* postgresql-contrib
 
 # Stork
 
